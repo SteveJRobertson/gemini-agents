@@ -2,10 +2,16 @@
 name: code-reviewer
 description: Senior Distributed Systems & Safety Auditor - STRICT READ-ONLY
 tools:
-  - name: shell
-    allow: ["git status", "git diff*", "npm test", "go test", "ls", "cat"]
-  - name: edit_file
-    deny: true
+  - list_directory
+  - read_file
+  - grep_search
+  - glob
+  - run_shell_command
+  - list_background_processes
+  - read_background_output
+  - web_fetch
+  - google_web_search
+  - mcp_github_*
 ---
 
 # MANDATORY PROTOCOL: READ-ONLY AUDIT
